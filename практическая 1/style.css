@@ -1,0 +1,450 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f5f7fa;
+  color: #1a1a1a;
+  line-height: 1.6;
+  padding-bottom: 40px;
+}
+
+/* --------------------------------------------------------Шапка сайта-------------------------------------------------------- */
+.site-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e4eb;
+  padding: 16px 0;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.profile-info h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.subtitle {
+  color: #64748b;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #334155;
+  font-size: 15px;
+  transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+  color: #2563eb;
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .main-nav ul {
+    justify-content: center;
+    margin-top: 16px;
+  }
+}
+
+/* --------------------------------------------------------Фото студента-------------------------------------------------------- */
+.student-photo {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 32px auto 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+}
+
+.left-img {
+  float: left;
+  margin-right: 20px; 
+}
+
+.photo-rounded {
+  border-radius: 25px; 
+}
+
+.photo {
+  max-width: 0px;
+  height: auto;
+}
+
+.main-wrapper {
+  display: flex;          
+  gap: 40px;
+  max-width: 1200px; 
+  padding: 20px;
+}
+
+.content-block {
+  flex-grow: 1;
+}
+
+/* --------------------------------------------------------Секции навыков и целей-------------------------------------------------------- */
+.portfolio-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.skills, .goals, .about {
+  flex: 1;
+  min-width: 280px;
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb;
+}
+
+.skills h2, .goals h2, .about h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #1f2937;
+  font-weight: 700;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-list li {
+  background: #f9fafb;
+  border-left: 4px solid #3b82f6; 
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+  line-height: 1.5;
+  color: #374151;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.skills-list li:last-child {
+  margin-bottom: 0;
+}
+
+.about-content {
+  background: #f9fafb;
+  border-left: 4px solid #3b82f6; 
+  padding: 20px;
+  border-radius: 4px;
+  line-height: 1.6;
+  color: #374151;
+}
+
+.about-content p {
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .portfolio-grid {
+    flex-direction: column;
+  }
+}
+
+/* --------------------------------------------------------Форма обратной связи-------------------------------------------------------- */
+.form-container{
+margin: 30px auto 0 auto;
+}
+
+.form-container {
+  background-color: #f9fafb;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
+  max-width: 500px; 
+  margin-top: 30px; 
+}
+
+.form-container h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: sans-serif;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column; 
+  gap: 8px; 
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #4a5568;
+  font-family: sans-serif;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #f9fafb;
+  border-radius: 8px;
+  font-size: 15px;
+  background-color: #f9fafb;
+  outline: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-container input:focus,
+.form-container textarea:focus {
+  border-color: #3182ce; 
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+}
+
+
+.submit-btn {
+  background-color: #3182ce;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: 100%; 
+}
+
+.submit-btn:hover {
+  background-color: #2b6cb0;
+}
+
+/* --------------------------------------------------------Расписание-------------------------------------------------------- */
+table{
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,td{
+  border: 1px solid #000000;
+  padding: 12px 16px;
+  text-align: left;
+}
+
+th{
+  background-color: #4f86f7;
+  font-weight: 600;
+}
+
+tbody tr:nth-child(even){
+background-color: #fafafa;
+}
+
+tbody tr:hover{
+  background-color: #eef6ff;
+}
+
+
+/* --------------------------------------------------------Галерея-------------------------------------------------------- */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-grid figure {
+    margin: 0;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-grid figcaption {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* --------------------------------------------------------Адаптация-------------------------------------------------------- */
+@media (max-width: 600px) {
+  .profile-info h1 {
+    font-size: 20px;
+  }
+
+  section h2 {
+    font-size: 18px;
+  }
+
+  .skills-list li,
+  .goals-list li {
+    padding: 12px 12px 12px 16px;
+    font-size: 14px;
+  }
+}
+
+
+/* --------------------------------------------------------ФУТЕР-------------------------------------------------------- */
+.site-footer {
+  background: linear-gradient(180deg, #4f86f7 0%, #2b6edd 100%); 
+  color: #ffffff;
+  padding: 40px 0;
+  margin-top: auto; 
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-weight: 600;
+  border-bottom: 2px solid #ffffff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.footer-link {
+  display: block;
+  color: #e5effe;
+  text-decoration: none;
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+  font-size: 15px;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+  padding-left: 5px; 
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-copyright p {
+  font-size: 14px;
+  color: #cce5ff;
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footer-col h4 {
+    border-bottom: none;
+    margin-bottom: 10px;
+  }
+  
+  .footer-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .footer-link {
+    margin-right: 15px;
+    margin-bottom: 10px;
+  }
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+}
